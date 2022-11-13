@@ -29,7 +29,6 @@
       <version>5.9.1</version>
       <scope>test</scope>
     </dependency>
-
   </dependencies>
 
   <build>
@@ -56,6 +55,15 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
+          <configuration>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <classpathPrefix>lib/</classpathPrefix>
+                <mainClass>ba.unsa.etf.rpr.App</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
