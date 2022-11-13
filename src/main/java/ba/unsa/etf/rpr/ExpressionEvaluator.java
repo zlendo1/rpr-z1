@@ -57,11 +57,11 @@ public class ExpressionEvaluator {
                 if (op.equals("+"))
                     v = v + vals.pop();
                 else if (op.equals("-"))
-                    v = v - vals.pop();
+                    v = vals.pop() - v;
                 else if (op.equals("*"))
                     v = v * vals.pop();
                 else if (op.equals("/"))
-                    v = v / vals.pop();
+                    v = vals.pop() / v;
                 else if (op.equals("sqrt"))
                     v = Math.sqrt(v);
 
