@@ -78,4 +78,11 @@ class ExpressionEvaluatorTest {
         assertEquals(10D, ExpressionEvaluator.evaluate("( ( 2 + 3 ) * ( 4 - 2 ) )"));
     }
 
+    /**
+     * Testira iznimku za nedostajuce zagrade
+     */
+    @Test
+    void evaluate10() {
+        assertThrows(RuntimeException.class, () -> ExpressionEvaluator.evaluate("2 + 3 )"));
+    }
 }
